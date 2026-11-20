@@ -1,0 +1,78 @@
+name: Publish score viewer
+# Pages are rebuilt only after all release assets have been uploaded.
+# A push to main must not update a published site.
+on:
+  repository_dispatch:
+    types: [scorekit-viewer-update]
+permissions:
+  contents: read
+concurrency:
+  group: scorekit-viewer-pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Build latest release viewer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this score repository and ScoreKit
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+      - name: Build website structure
+        run: python3 scorekit/viewer/build_site.py --output _site
+      - name: Publish only the latest released SVG and MP3
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 scorekit/viewer/publish_latest.py --output _site
+      - name: Check published viewer, version, and resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s _site/index.html
+          test -s _site/viewer/index.html
+          test -s _site/viewer/app.js
+          test -s _site/viewer/latest.json
+          test -s _site/viewer/latest/viewer/manifest.json
+          test -s _site/viewer/latest/viewer/timeline.json
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          from scorekit.viewer.publish_latest import validate_published
+          root = Path("_site")
+          data = json.loads((root / "viewer/latest.json").read_text())
+          manifest = validate_published(root, data["tag"])
+          assert data["repo"] == os.environ["GITHUB_REPOSITORY"]
+          assert len(manifest["views"]) >= 2
+          assert len(manifest["audio_tracks"]) >= 1
+          print("Verified:", data["tag"], len(manifest["views"]), "views,",
+                len(manifest["audio_tracks"]), "audio tracks")
+          PY
+      - name: Upload private/test preview artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: scorekit-project-preview-${{ github.sha }}
+          path: _site/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site/
+  deploy:
+    name: Deploy score viewer to Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

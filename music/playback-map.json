@@ -1,0 +1,139 @@
+{
+  "schema": "ensemble-playback-map-v1",
+  "printed_measures": 152,
+  "exclusive_measures": [],
+  "solo_part_rests": {
+    "flute-2": [
+      17,
+      18,
+      19,
+      20,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      151
+    ],
+    "oboe": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      140,
+      141,
+      142,
+      143
+    ],
+    "trombone-2": [
+      4,
+      5,
+      83,
+      84,
+      103,
+      104,
+      105,
+      106,
+      107,
+      109
+    ],
+    "clarinet-1": [
+      112,
+      113,
+      114
+    ],
+    "clarinet-2": [
+      49,
+      50,
+      51,
+      52,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92
+    ]
+  },
+  "import_text_marks": {
+    "violins-1": {
+      "21": "espr.",
+      "69": "espr.",
+      "98": "cresc."
+    },
+    "violins-2": {
+      "53": "espr.",
+      "98": "cresc."
+    },
+    "violas": {
+      "53": "espr.",
+      "101": "espr."
+    },
+    "violoncellos": {
+      "53": "espr."
+    },
+    "contrabasses": {
+      "53": "espr."
+    },
+    "flute-1": {
+      "69": "espr."
+    },
+    "trumpet-1": {
+      "1": "marc."
+    },
+    "soprano-saxophone": {
+      "53": "espr.",
+      "117": "espr.",
+      "137": "espr."
+    },
+    "drum-kit": {
+      "77": "secco"
+    },
+    "clarinet-1": {
+      "69": "espr."
+    },
+    "trombone-2": {
+      "1": "marc."
+    }
+  },
+  "source_section_split": 116,
+  "required_final_barline": "||",
+  "forbid_duplicate_music_sources": [
+    "flutes-1-2",
+    "clarinets-1-2",
+    "trumpets-1-2",
+    "trombones-1-2"
+  ],
+  "expected_playback_measures": 268
+}

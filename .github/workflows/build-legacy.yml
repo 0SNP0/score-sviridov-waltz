@@ -1,0 +1,38 @@
+name: Build score (legacy Ubuntu fallback)
+on:
+  workflow_dispatch:
+concurrency:
+  group: scorekit-build-legacy-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  pdf:
+    name: PDF score and parts
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: ScoreKit print
+        uses: ./scorekit/actions/build
+        with:
+          source_tag: ''
+  media:
+    name: MIDI, audio, viewer and packages
+    needs: pdf
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: ScoreKit media
+        uses: ./scorekit/actions/media
+        with:
+          source_tag: ''

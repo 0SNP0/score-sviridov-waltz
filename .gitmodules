@@ -1,0 +1,3 @@
+[submodule "scorekit"]
+	path = scorekit
+	url = https://github.com/0SNP0/skorekit.git

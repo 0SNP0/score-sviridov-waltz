@@ -1,0 +1,60 @@
+name: Build score
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
+concurrency:
+  group: scorekit-build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'release' }}
+permissions:
+  contents: read
+# GitHub decides the job container before checking out ScoreKit. Keep the single
+# image version here; ScoreKit's LilyPond version pin is only for legacy Ubuntu.
+env:
+  SCOREKIT_IMAGE_MODE: '1'
+defaults:
+  run:
+    shell: bash
+jobs:
+  pdf:
+    if: github.event_name != 'release' || startsWith(github.event.release.tag_name, 'v')
+    name: PDF score and parts
+    runs-on: ubuntu-24.04
+    container:
+      image: &scorekit_image ghcr.io/0snp0/lilypond-ci-image@sha256:88a0c4bb97eab85be6df02a8d24279d1b2dc667236ca6763fc46ac6be85ed44f
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: ScoreKit print
+        uses: ./scorekit/actions/build
+        with:
+          source_tag: ${{ github.event_name == 'release' && github.event.release.tag_name || '' }}
+  media:
+    name: MIDI, audio, viewer and packages
+    needs: pdf
+    runs-on: ubuntu-24.04
+    container:
+      image: *scorekit_image
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: ScoreKit media
+        uses: ./scorekit/actions/media
+        with:
+          source_tag: ${{ github.event_name == 'release' && github.event.release.tag_name || '' }}
+      - name: Publish musician-facing GitHub Release
+        if: github.event_name == 'release' && startsWith(github.event.release.tag_name, 'v')
+        uses: ./scorekit/actions/release
+        with:
+          tag: ${{ github.event.release.tag_name }}
