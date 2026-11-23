@@ -158,4 +158,6 @@ clarinetOneMusic = { \clarinetOneOpening \clarinetOneBridge }
 
 clarinetOneMusicPlayback = \scorePlayback \clarinetOneOpening \clarinetOneBridge
 
-
+% Both Flutes I and III quote the canonical Clarinet I line in bars 5–15.
+% The receiving instruments keep their own (silent) playback sources.
+\addQuote "clarinetOneForFluteCues" { \clarinetOneMusic }
