@@ -20,30 +20,30 @@ tenorSaxAfterCue = {
   e2. |
   d2. |
   b,2. |
-  e,2. |
-  e,2. |
+  e2. |
+  e2. |
   a,2. |
   gis,2. |
   fis2. |
   e2. |
   d2. |
   a,2. |
-  fis,2. |
-  b,2. |
+  fis2. |
+  b2. |
   a2. |
   gis2. |
   fis2. |
   e2. |
   d2. |
-  e,2. |
-  eis,2. |
-  fis,2. |
-  gis,4  \ff r4 gis,4 |
-  gis,4 r4 gis,4 |
-  fis,4 r4 fis,4 |
-  fis,4 r4 fis,4 |
-  gis,4 r4 gis,4 |
-  gis,4 r4 gis,4 |
+  e2. |
+  eis2. |
+  fis2. |
+  gis4  \ff r4 gis4 |
+  gis4 r4 gis4 |
+  fis4 r4 fis4 |
+  fis4 r4 fis4 |
+  gis4 r4 gis4 |
+  gis4 r4 gis4 |
   { cis'4-. gis4-. e4-. } |
   { cis4-. r4 r4 } |
   dis4  \f r4 r4 |

@@ -83,7 +83,7 @@ violinsTwoOpening = {
       cis'2. |
       fis'2. |
       b'2.~ |
-      b'4 ais'4 b'4 |
+      b'4 ais'4\downbow b'4 |
       d''4 cis''4. ais'8 |
       b'2. |
     }
@@ -165,7 +165,7 @@ violinsTwoOpening = {
   cis''2.~ |
   cis''4 d''4.( cis''8) |
   a''2.~ |
-  a''4 fis''4 gis''4 |
+  a''4 fis''4\downbow gis''4 |
   % Bars 113–116
   a''4 gis''4 fis''4 |
   e''4 cis''4 a'4 |

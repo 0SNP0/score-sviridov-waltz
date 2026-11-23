@@ -2,8 +2,8 @@
 \include "articulate.ly"
 \include "../metadata.ily"
 \include "../music/global.ily"
-\include "../music/flute-1.ily"
 \include "../music/clarinet-1.ily"
+\include "../music/flute-1.ily"
 \include "../music/flute-3.ily"
 \include "../scorekit/lilypond/layout/part.ily"
 \header { title = \workTitle subtitle = \workSubtitle composer = \composerCredit arranger = \arrangerCredit instrument = "Flute I" tagline = ##f }

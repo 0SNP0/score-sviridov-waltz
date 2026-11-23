@@ -5,7 +5,10 @@ fluteOneMusicCombined = {
   \key e \major
   \time 3/4
   % Bars 1–4
-  R2.*15 |
+  R2.*4 |
+  \barNumberCheck #5
+  \scorekitCueOrRest ##t "clarinetOneForFluteCues" #UP "Cl. I" { R2.*11 | }
+  \barNumberCheck #16
   \oneVoice  a'''2.-> \f |
   % Bars 17–20
   gis'''4( e'''4 cis'''4 |

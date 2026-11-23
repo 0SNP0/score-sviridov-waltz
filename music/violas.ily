@@ -81,7 +81,7 @@ violasOpening = {
   fis2. |
   a2. |
   d'2.~ |
-  d'4 cis'4 d'4 |
+  d'4 cis'4\downbow d'4 |
   f'4 e'4. cis'8 |
   d'2. |
   % Bars 69–72
