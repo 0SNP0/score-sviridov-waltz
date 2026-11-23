@@ -4,7 +4,6 @@
 \include "scorekit/lilypond/instrument-switch.ily"
 \include "scorekit/lilypond/cue-notes.ily"
 
-\addQuote "fluteThreeClarinetI" { \clarinetOneMusic }
 \addQuote "fluteThreeFluteI" { \fluteOneMusic }
 
 fluteThreeOpening = {
@@ -14,7 +13,7 @@ fluteThreeOpening = {
   R2.*4 |
   % Bars 5–15: Clarinet I cue, selectable for each edition.
   \scorekitCueAlternatives
-  "fluteThreeClarinetI" #UP "Cl. I" { R2.*11 | }
+  "clarinetOneForFluteCues" #UP "Cl. I" { R2.*11 | }
   #'(flute3SaxCuePart flute3SaxCueScore flute3SaxCueConcert flute3SaxCueCombined)
   #'(flute3SaxCueRest)
   % Bars 16–20: Flute I cue, independent of the first cue.
