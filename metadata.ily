@@ -1,6 +1,6 @@
 \version "2.26.0"
 % Canonical credits: Ensemble, Assemble is the orchestra, not the arranger.
-workTitle = "The Snowstorm"
+workTitle = "The Snowstorm. Waltz"
 % Portable short basename for exports; the full title stays on the score.
 workFileSlug = "sviridov-snowstorm-waltz"
 workSubtitle = "Waltz"
