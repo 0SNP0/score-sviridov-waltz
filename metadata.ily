@@ -3,7 +3,7 @@
 workTitle = "The Snowstorm. Waltz"
 % Portable short basename for exports; the full title stays on the score.
 workFileSlug = "sviridov-snowstorm-waltz"
-workSubtitle = "Waltz"
+workSubtitle = ""
 composerCredit = "Georgy Sviridov"
 lyricistCredit = ""
 translatorCredit = ""
