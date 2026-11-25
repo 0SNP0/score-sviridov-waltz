@@ -1,5 +1,5 @@
 % Bars 5–16: printed Clarinet I cue, silent in playback.
-\include "scorekit/lilypond/cue-notes.ily"
+\include "../scorekit/lilypond/cue-notes.ily"
 % Print quotations use each edition's notation; playback uses no quote.
 \addQuote "sopranoSaxClOneWritten" { \transpose c d { \clarinetOneMusic } }
 \addQuote "sopranoSaxClOneConcert" { \clarinetOneMusic }
