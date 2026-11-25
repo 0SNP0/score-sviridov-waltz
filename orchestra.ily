@@ -27,6 +27,7 @@
 \include "music/alto-saxophone.ily"
 \include "music/tenor-saxophone.ily"
 \include "music/accordion.ily"
+\include "music/piano.ily"
 
 orchestraScore = <<
   \new StaffGroup <<
@@ -69,6 +70,24 @@ orchestraScore = <<
       \new Staff \with { midiInstrument = "accordion" \consists Merge_rests_engraver } << { \tag #'written { \global } \tag #'concert { \global } \tag #'playback { \globalPlayback } } { \tag #'written { \accordionRightMusicPrint } \tag #'concert { \accordionRightMusicPrint } \tag #'playback { \accordionRightMusicPlayback } } >>
       \tag #'(written concert) { \new Dynamics = "accordionExpression" { \accordionExpressionMarks } }
       \new Staff \with { midiInstrument = "accordion" } << { \tag #'written { \global } \tag #'concert { \global } \tag #'playback { \globalPlayback } } { \tag #'written { \accordionLeftMusicPrint } \tag #'concert { \accordionLeftMusicPrint } \tag #'playback { \accordionLeftMusicPlayback } } >>
+    >>
+  >>
+  \new StaffGroup <<
+    \new PianoStaff \with {
+      instrumentName = \markup \fontsize #-1 "Piano"
+      shortInstrumentName = "Pno."
+      \override InstrumentName.self-alignment-X = #RIGHT
+      \override InstrumentName.padding = #0.25
+    } <<
+      \new Staff \with { midiInstrument = "acoustic grand" } <<
+        { \tag #'written { \global } \tag #'concert { \global } \tag #'playback { \globalPlayback } }
+        { \tag #'written { \pianoRightMusicPrint } \tag #'concert { \pianoRightMusicPrint } \tag #'playback { \pianoRightMusicPlayback } }
+      >>
+      \tag #'(written concert) { \new Dynamics = "pianoExpression" { \pianoExpressionMarks } }
+      \new Staff \with { midiInstrument = "acoustic grand" } <<
+        { \tag #'written { \global } \tag #'concert { \global } \tag #'playback { \globalPlayback } }
+        { \tag #'written { \pianoLeftMusicPrint } \tag #'concert { \pianoLeftMusicPrint } \tag #'playback { \pianoLeftMusicPlayback } }
+      >>
     >>
   >>
   \new StaffGroup <<
