@@ -1,26 +1,17 @@
 % Flute III doubles piccolo. Its instrument changes are explicit and reusable.
 % Bars 21–52 are Flute III music and supply Flute I cue notes.
 % Piccolo passages store their actual sounding pitches.
-\include "scorekit/lilypond/instrument-switch.ily"
-\include "scorekit/lilypond/cue-notes.ily"
+\include "../scorekit/lilypond/instrument-switch.ily"
+\include "../scorekit/lilypond/cue-notes.ily"
 
-\addQuote "fluteThreeFluteI" { \fluteOneMusic }
+\addQuote "fluteThreeFluteI" { \fluteOneOpeningPlayback \fluteOneBridge }
 
-fluteThreeOpening = {
+fluteThreeSetup = {
   \clef treble \key e \major \time 3/4
   \switchInstrument "Flute III / Piccolo" "Fl. III/Picc." "flute"
-  % Bars 1–4: tacet.
-  R2.*4 |
-  % Bars 5–15: Clarinet I cue, selectable for each edition.
-  \scorekitCueAlternatives
-  "clarinetOneForFluteCues" #UP "Cl. I" { R2.*11 | }
-  #'(flute3SaxCuePart flute3SaxCueScore flute3SaxCueConcert flute3SaxCueCombined)
-  #'(flute3SaxCueRest)
-  % Bars 16–20: Flute I cue, independent of the first cue.
-  \scorekitCueAlternatives
-  "fluteThreeFluteI" #UP "Fl. I" { R2.*5 | }
-  #'(flute3FluteCuePart flute3FluteCueScore flute3FluteCueConcert flute3FluteCueCombined)
-  #'(flute3FluteCueRest)
+  }
+
+fluteThreeAfterCues = {
   \barNumberCheck #21
   % Bar 21: Flute III
   \switchInstrument "Flute III" "Fl. III" "flute"
@@ -89,6 +80,28 @@ fluteThreeOpening = {
   \scorekitPiccoloNotes { cis''''4-. r4 r4 } |
 }
 
+fluteThreeOpening = {
+  \fluteThreeSetup
+  % Bars 1–4: tacet.
+  R2.*4 |
+  % Bars 5–15: Clarinet I cue, selectable for each edition.
+  \scorekitCueAlternatives
+  "clarinetOneForFluteCues" #UP "Cl. I" { R2.*11 | }
+  #'(flute3SaxCuePart flute3SaxCueScore flute3SaxCueConcert flute3SaxCueCombined)
+  #'(flute3SaxCueRest)
+  % Bars 16–20: Flute I cue, independent of the first cue.
+  \scorekitCueAlternatives
+  "fluteThreeFluteI" #UP "Fl. I" { R2.*5 | }
+  #'(flute3FluteCuePart flute3FluteCueScore flute3FluteCueConcert flute3FluteCueCombined)
+  #'(flute3FluteCueRest)
+  \fluteThreeAfterCues
+}
+fluteThreeOpeningWithoutCues = {
+  \fluteThreeSetup
+  R2.*20 | % Print-only cues are not part of the performing/quoted source.
+  \fluteThreeAfterCues
+}
+
 fluteThreeBridge = {
   % Bars 117–152: tacet; Piccolo staff name persists.
   % The Opening explicitly resets Flute III when playback returns D.C.
@@ -96,11 +109,11 @@ fluteThreeBridge = {
 }
 
 fluteThreeMusic = { \fluteThreeOpening \fluteThreeBridge }
-fluteThreeMusicPlayback = \scorePlayback \fluteThreeOpening \fluteThreeBridge
+fluteThreeMusicPlayback = \scorePlayback \fluteThreeOpeningWithoutCues \fluteThreeBridge
 
 % The Flute I cue quotes the genuine Flute III playing stream.
-% Select Flute III rests in its two earlier cue alternatives
-% to keep the quotation aligned to the real 152-bar timeline.
+% This untagged source has real Flute III notes and 20 bars of silence.
+% It does not depend on print cue selectors or quote the receiving flute.
 \addQuote "fluteThreeIntoOne" {
-  \keepWithTag #'(flute3SaxCueRest flute3FluteCueRest) \fluteThreeMusic
+  \fluteThreeOpeningWithoutCues \fluteThreeBridge
 }

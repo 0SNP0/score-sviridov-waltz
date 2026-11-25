@@ -1,5 +1,5 @@
 % Canonical Clarinet II quotation: print-only, not sounded in sax MIDI.
-\include "scorekit/lilypond/cue-notes.ily"
+\include "../scorekit/lilypond/cue-notes.ily"
 % Quoted pitches are independent of the receiver's notation transposition.
 \addQuote "tenorSaxClarinetIIWritten" { \transpose c d' { \clarinetTwoMusic } }
 \addQuote "tenorSaxClarinetIIConcert" { \clarinetTwoMusic }

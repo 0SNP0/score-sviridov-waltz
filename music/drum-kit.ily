@@ -1,5 +1,5 @@
 % Drum kit: one print voice; separate MIDI percussion stems.
-\include "scorekit/lilypond/drum-stems.ily"
+\include "../scorekit/lilypond/drum-stems.ily"
 
 drumKitOpening = \drummode {
   \clef percussion

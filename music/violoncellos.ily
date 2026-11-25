@@ -1,6 +1,6 @@
 % One measure per line, numbered blocks for Frescobaldi/VS Code.
 % Printed cues use Bass Clarinet's canonical notes; playback keeps the rest.
-\include "scorekit/lilypond/cue-notes.ily"
+\include "../scorekit/lilypond/cue-notes.ily"
 \addQuote "bassClCello" { \bassClarinetMusic }
 violoncellosFirstThree = {
   % Reset the MIDI program on every return to the Opening (D.C. al Fine).
