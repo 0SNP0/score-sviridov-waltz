@@ -252,13 +252,13 @@ pianoExpressionMarks = {
   \time 3/4
   s2.*3 |       % 1–3
   s2.\mf |      % 4
-  s2.\p |       % 5
+  s4 s2\p |       % 5
   s2.*47 |      % 6–52
   s2.\f |       % 53
   s2.*29 |      % 54–82
-  s4 s4\mf s4 | % 83, beat 2
+  s4 s4\mp s4 | % 83, beat 2
   s2. |         % 84
-  s2.\f |       % 85
+  s2.\mf |       % 85
   s2.*67 |      % 86–152
 }
 
