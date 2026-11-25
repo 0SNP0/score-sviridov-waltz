@@ -1,5 +1,5 @@
 % Clarinet I cue in bars 5–15; Flute III cue in bars 21–52.
-\include "scorekit/lilypond/cue-notes.ily"
+\include "../scorekit/lilypond/cue-notes.ily"
 % Flute III's actual stream supplies this printed cue.
 fluteOneBeforeClarinetCue = {
   \clef treble
