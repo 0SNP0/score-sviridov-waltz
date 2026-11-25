@@ -145,22 +145,15 @@ violinsTwoOpening = {
   e''4 _\markup \italic { "cresc." }( dis''4 cis''4) |
   b'4( a'4 gis'4) |
   fis'4( e'4. dis'8) |
-  % Bars 101–108: two voices; upper voice plays only in bar 101.
-  <<
-    { \voiceOne gis'4 s2 | s2.*7 | }
-    \\
-    { \voiceTwo
-      gis'2. _\markup \italic { "espr." }~ \f |
-      gis'4 a'4.( gis'8) |
-      gis'4( cis''4. gis'8) |
-      gis'4( cis''4. gis'8) |
-      gis'2.~ |
-      gis'4 a'4.( gis'8) |
-      gis'4( cis''4. gis'8) |
-      gis'4( e''4. cis''8) |
-    }
-  >>
-  \oneVoice
+  % Bars 101–108: one voice with natural stem directions.
+  gis'2. _\markup \italic { "espr." }~ \f |
+  gis'4 a'4.( gis'8) |
+  gis'4( cis''4. gis'8) |
+  gis'4( cis''4. gis'8) |
+  gis'2.~ |
+  gis'4 a'4.( gis'8) |
+  gis'4( cis''4. gis'8) |
+  gis'4( e''4. cis''8) |
   % Bar 109: continuation of the existing dynamic; no new marking.
   cis''2.~ |
   cis''4 d''4.( cis''8) |
