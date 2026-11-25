@@ -1,5 +1,5 @@
 % Printed cues use Bass Clarinet's canonical notes; playback keeps the rest.
-\include "scorekit/lilypond/cue-notes.ily"
+\include "../scorekit/lilypond/cue-notes.ily"
 % \cueDuring takes pitch from the registered quotation rather than the
 % instrument's enclosing transposition. Keep separate print spellings.
 \addQuote "bassClContrabassWritten" { \scorekitCueOctaveUp \bassClarinetMusic }
