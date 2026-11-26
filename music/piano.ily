@@ -1,57 +1,7 @@
 % Piano RH. One voice; all brass contributions share each chord's stem.
 pianoRightOpening = {
   \clef treble \key e \major \time 3/4
-  R2.*4 |
-  % 5–52: accordion right hand, piano.
-  r4 <gis cis' e' gis'>4-. \p <gis cis' e' gis'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <a cis' e' a'>4-. <a cis' e' a'>4-. |
-  r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <a cis' e' a'>4-. <a cis' e' a'>4-. |
-  r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <gis bis fis' gis'>4-. <gis bis fis' gis'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  <gis cis' e' gis'>4-. r4 r4 |
-  r4 <gis bis fis'>4-. <gis bis fis'>4-. |
-  r4 <gis bis fis'>4-. <gis bis fis'>4-. |
-  r4 <gis cis' e'>4-. <gis cis' e'>4-. |
-  r4 <gis cis' e'>4-. <gis cis' e'>4-. |
-  r4 <gis bis fis'>4-. <gis bis fis'>4-. |
-  r4 <gis bis fis'>4-. <gis bis fis'>4-. |
-  r4 <gis cis' e'>4-. <gis cis' e'>4-. |
-  r4 <gis cis' e'>4-. <gis cis' e'>4-. |
-  r4 <b cis' eis'>4-. <b cis' eis'>4-. |
-  r4 <b cis' eis'>4-. <b cis' eis'>4-. |
-  r4 <a cis' fis'>4-. <a cis' fis'>4-. |
-  r4 <a cis' fis'>4-. <a cis' fis'>4-. |
-  <a cis' fis'>4->-. r4 r4 |
-  <ais cis' fisis'>4->-. r4 r4 |
-  <a cis' e'>4->-. r4 r4 |
-  R2. |
-  r4 <gis bis fis' gis'>4-. <gis bis fis' gis'>4-. |
-  r4 <gis bis fis' gis'>4-. <gis bis fis' gis'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <gis bis fis' gis'>4-. <gis bis fis' gis'>4-. |
-  r4 <gis bis fis' gis'>4-. <gis bis fis' gis'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <gis cis' e' gis'>4-. <gis cis' e' gis'>4-. |
-  r4 <b cis' eis' gis'>4-. <b cis' eis' gis'>4-. |
-  r4 <b cis' eis' gis'>4-. <b cis' eis' gis'>4-. |
-  r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
-  r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
-  <a cis' fis' a'>4-. r4 r4 |
-  <a cis' fisis' a'>4-. r4 r4 |
-  <gis cis' e' gis'>4-. r4 <gis bis fis' gis'>4-. |
-  <gis cis' e' gis'>4-. r4 r4 |
-  % 53–76: Tpt. I, Tpt. II, Tbn. I, and Tpt. I one octave lower.
+  R2.*52 |
   r4 <cis' e' a' cis''>4-. \f <cis' e' a' cis''>4-. |
   r4 <cis' e' gis' cis''>4-. <cis' e' gis' cis''>4-. |
   r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
@@ -76,7 +26,15 @@ pianoRightOpening = {
   r4 <fis a d' fis'>4-. <fis a d' fis'>4-. |
   r4 <b d' gis' b'>4-. <b d' gis' b'>4-. |
   r4 <a cis' fis' a'>4-. <a cis' fis' a'>4-. |
-  R2.*8 |
+  % Bars 77–82
+  <gis cis' e' gis'>4-. \ff r4 <gis cis' e' gis'>4-. |
+  <gis cis' e' gis'>4-. r4 <gis cis' e' gis'>4-. |
+  <a cis' fis' a'>4-. r4 <a cis' fis' a'>4-. |
+  <a cis' fis' a'>4-. r4 <a cis' fis' a'>4-. |
+  <gis cis' e' gis'>4-. r4 <gis cis' e' gis'>4-. |
+  <gis bis fis' gis'>4-. r4 <gis bis fis' gis'>4-. |
+  <gis cis' e' gis'>4-. r4 r4 |
+  R2. | % Bar 84
   % 85–100: same brass reduction.
   r4 <fis gis c' fis'>4-. \f <fis gis c' fis'>4-. |
   r4 <fis gis c' fis'>4-. <fis gis c' fis'>4-. |
@@ -127,54 +85,8 @@ pianoLeftOpening = {
   % 4–5: accordion left hand.
   fis,4-. \mf e,4-. dis,4-. |
   cis,4-. \p r4 r4 |
-  % 6–52: contrabasses.
-  e,4 r4 r4 |
-  a,,4 r4 r4 |
-  fis,,4 r4 r4 |
-  e,4 r4 r4 |
-  fis,4 r4 r4 |
-  e,4 r4 r4 |
-  dis,4 r4 r4 |
-  cis,4 r4 r4 |
-  b,,4 r4 r4 |
-  a,,4 r4 r4 |
-  fis,,4 r4 r4 |
-  e,4 r4 r4 |
-  gis,,4 r4 r4 |
-  cis,4 r4 gis,,4 |
-  cis,4 r4 r4 |
-  dis,4 r4 r4 |
-  gis,,4 r4 r4 |
-  cis,4 r4 r4 |
-  e,4 r4 r4 |
-  dis,4 r4 r4 |
-  gis,,4 r4 r4 |
-  cis,4 r4 r4 |
-  e,4 r4 r4 |
-  cis,4 r4 r4 |
-  cis,4 r4 r4 |
-  fis,4 r4 r4 |
-  e,4 r4 r4 |
-  dis,4-> r4 r4 |
-  e,4-> r4 r4 |
-  fis,4-> r4 r4 |
-  R2. |
-  dis,4 r4 r4 |
-  gis,,4 r4 r4 |
-  cis,4 r4 r4 |
-  e,4 r4 r4 |
-  dis,4 r4 r4 |
-  gis,,4 r4 r4 |
-  cis,4 r4 r4 |
-  e,4 r4 r4 |
-  cis,4 r4 r4 |
-  cis,4 r4 r4 |
-  fis,4 r4 r4 |
-  e,4 r4 r4 |
-  dis,4 r4 r4 |
-  e,4 r4 r4 |
-  gis,,4 r4 gis,,4 |
-  cis,4 r4 r4 |
+  % Bars 6–52: silent.
+  R2.*47 |
   % 53–76: contrabasses and cellos in one octave chord.
   <a, a>2. \f _\markup \italic { "espr." } |
   <gis, gis>2. |
@@ -200,9 +112,13 @@ pianoLeftOpening = {
   <e,, e,>2. |
   <eis,, eis,>2. |
   <fis,, fis,>2. |
-  R2.*6 |
-  % 83 from beat 2–84 beat 1: bass clarinet's sounding pitches.
-  r4 gis,4-. \mf e,4-. |
+  <gis,, gis,>4 \ff r4 <gis,, gis,>4 |
+  <gis,, gis,>4 r4 <gis,, gis,>4 |
+  <fis,, fis,>4 r4 <fis,, fis,>4 |
+  <fis,, fis,>4 r4 <fis,, fis,>4 |
+  <gis,, gis,>4 r4 <gis,, gis,>4 |
+  <gis,, gis,>4 r4 <gis,, gis,>4 |
+  <cis, cis>4 gis,4-. \mf e,4-. |
   cis,4-. r4 r4 |
   % 85–116: contrabass and cello octaves.
   <dis, dis>4 \f r4 r4 |
@@ -251,9 +167,8 @@ pianoLeftMusicPlayback = \scorePlayback \pianoLeftOpening \pianoLeftBridge
 pianoExpressionMarks = {
   \time 3/4
   s2.*3 |       % 1–3
-  s2.\p |      % 4
-  s4 s2\pp |       % 5
-  s2.*47 |      % 6–52
+  s2.\p |       % 4
+  s2.*48 |      % 5–52
   s2.\f |       % 53
   s2.*29 |      % 54–82
   s4 s4\mp s4 | % 83, beat 2
