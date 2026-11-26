@@ -167,7 +167,7 @@ pianoLeftMusicPlayback = \scorePlayback \pianoLeftOpening \pianoLeftBridge
 pianoExpressionMarks = {
   \time 3/4
   s2.*3 |       % 1–3
-  s2.\p |       % 4
+  s2.\pp |       % 4
   s2.*48 |      % 5–52
   s2.\f |       % 53
   s2.*29 |      % 54–82
