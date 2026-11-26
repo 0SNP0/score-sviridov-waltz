@@ -3,7 +3,11 @@
 \include "../metadata.ily"
 \include "../music/global.ily"
 \include "../music/piano.ily"
+#(define partStaffSize 17)
+#(define partMaxStaffSize 24)
+#(define partTargetPages 1)
 \include "../scorekit/lilypond/layout/part.ily"
+\include "page-fill.ily"
 
 \header {
   title = \workTitle
